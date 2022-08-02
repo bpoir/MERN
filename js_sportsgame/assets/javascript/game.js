@@ -14,18 +14,16 @@ function pointCounter() {
     return randomBool;
 }
 
-
-
-
-reset.addEventListener("click", function (){
-    let newNumReset = Number(numReset.innerHTML) +1;
+reset.addEventListener("click", function () {
+    let newNumReset = Number(numReset.innerHTML) + 1;
     numReset.innerHTML = newNumReset;
-   
-   
-  
-    document.getElementById("teamOneCounter").innerHTML = -1;
+    
+    /* resets all variables*/
+    teamOneCounter.innerHTML = 0;
+    teamOneGoal.innerHTML = 0;
+    teamTwoCounter.innerHTML = 0;
+    teamTwoGoal.innerHTML = 0;
 })
-
 
 teamOne.addEventListener("click", function () {
 
@@ -37,7 +35,7 @@ teamOne.addEventListener("click", function () {
         let newTeamOneGoal = Number(teamOneGoal.innerHTML) + 1;
         teamOneGoal.innerHTML = newTeamOneGoal;
     }
-   
+
 })
 
 teamTwo.addEventListener("click", function () {
