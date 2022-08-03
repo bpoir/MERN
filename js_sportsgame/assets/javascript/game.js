@@ -19,8 +19,10 @@ reset.addEventListener("click", function () {
     team1 = teamOneGoal.innerHTML;
     team2 = teamTwoGoal.innerHTML;
 
-    
-    if (team1 > team2) {
+
+    if (teamOneCounter.innerHTML != teamTwoCounter.innerHTML) {
+        alert("Number of SHOTS TAKEN must be equal!!")
+    } else if (team1 > team2) {
         alert("Team one wins!!")
     } else if (team1 < team2) {
         alert("Team 2 wins!");
