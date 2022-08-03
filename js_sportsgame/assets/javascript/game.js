@@ -14,15 +14,33 @@ function pointCounter() {
     return randomBool;
 }
 
+
 reset.addEventListener("click", function () {
+    team1 = teamOneGoal.innerHTML;
+    team2 = teamTwoGoal.innerHTML;
+
+    
+    if (team1 > team2) {
+        alert("Team one wins!!")
+    } else if (team1 < team2) {
+        alert("Team 2 wins!");
+    } else {
+        alert("it's a tie!");
+    }
+
     let newNumReset = Number(numReset.innerHTML) + 1;
     numReset.innerHTML = newNumReset;
-    
+
     /* resets all variables*/
     teamOneCounter.innerHTML = 0;
     teamOneGoal.innerHTML = 0;
     teamTwoCounter.innerHTML = 0;
     teamTwoGoal.innerHTML = 0;
+
+    const audioElement = new Audio('car_horn.mp3');
+    audioElement.play();
+
+
 })
 
 teamOne.addEventListener("click", function () {
@@ -34,6 +52,8 @@ teamOne.addEventListener("click", function () {
     if (point === true) {
         let newTeamOneGoal = Number(teamOneGoal.innerHTML) + 1;
         teamOneGoal.innerHTML = newTeamOneGoal;
+
+
     }
 
 })
@@ -47,7 +67,11 @@ teamTwo.addEventListener("click", function () {
     if (point === true) {
         let newTeamTwoGoal = Number(teamTwoGoal.innerHTML) + 1;
         teamTwoGoal.innerHTML = newTeamTwoGoal;
+
     }
+
 })
+
+
 
 
